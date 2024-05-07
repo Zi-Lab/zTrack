@@ -1,6 +1,7 @@
 zTrack is a parameter-free "Cell Linking" algorithm that was developed by
 Dr. Zhike Zi 
-at Shenzhen Institute of Advanced Technology (SIAT), Chinese Academy of Sciences
+at Shenzhen Institute of Advanced Technology (SIAT)
+   Chinese Academy of Sciences, Shenzhen, China
 
 Required toolboxs for zTrack
     - MATLAB Image Processing Toolbox

@@ -32,8 +32,8 @@ following input parameters:
                   Assuming the number of available cores is num_cores_sys, 
                   zTrack uses num_cores_sys - 1 by default. 
 
-The functions zTrack_2d and zTrack_3d return a cell_track cell array. 
-For a cell labeled as l1 in frame t1, cell_track{t1}(l1) specifies 
+The functions 'zTrack_2d' and 'zTrack_3d' return a 'cell_track' cell array. 
+For a cell labeled as 'l1' in frame t1, cell_track{t1}(l1) specifies 
 the ID of the parent cell being tracked at frame t1-1. If the cell 
 is newly born and lacks a tracked parent, it is denoted by '0'.
 

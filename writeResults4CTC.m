@@ -10,7 +10,7 @@ function writeResults4CTC(cell_track, mask_folder, filenames_mask, tracResult_fi
 cell_in_edge = cell(size(cell_track));
 % for CTC tracking results
 % format: index cell@firstFrame-1, cell@lastFrame-1, parentIndex
-%   i.e.: 'index', 'start', 'stop', 'parent_branch_in2i2hikedex'
+%   i.e.: 'index', 'start', 'stop', 'parent_branch_index'
 edge_tracks = NaN([0,4]);
 
 for t = 1:length(cell_in_edge)

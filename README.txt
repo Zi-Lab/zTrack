@@ -1,7 +1,8 @@
 zTrack is a parameter-free "Cell Linking" algorithm that was developed by
 Dr. Zhike Zi 
-at Shenzhen Institute of Advanced Technology (SIAT)
-   Chinese Academy of Sciences, Shenzhen, China
+at Shenzhen Institute of Advanced Technology (SIAT), Chinese Academy of Sciences
+
+The code can be run in Matlab and has been tested on MacOS and Linux Systems. 
 
 Required toolboxs for zTrack
     - MATLAB Image Processing Toolbox
@@ -17,7 +18,7 @@ Instructions for compiling matlabPyrTools
     by using the "xcode-select" command from macOS Terminal: 
     sudo xcode-select -s /Applications/Xcode.app
     
-    - step 2: unzip matlabPyrTools-master.zip to the same folder, then run compilePyrTools under the MEX subfolder of matlabPyrTools
+    - step 2: run compilePyrTools under the MEX subfolder of matlabPyrTools
     
     - step 3: add matlabPyrTools-master and subfolders to MATLAB path
 
@@ -30,9 +31,16 @@ following input parameters:
     - 'NumCores': the number of cores used for parallel cell tracking (optional)
                   Assuming the number of available cores is num_cores_sys, 
                   zTrack uses num_cores_sys - 1 by default. 
-  
 
-According to the submission note, zTrack assume that input images are
+The following functions zTrack_2d and zTrack3d functions return a cell_track cell array.
+For cell l1 in frame t1, cell_track{t1}(l1) specifies the label id of the tracked parent 
+cell at frame t1-1. 
+
+cell_track  = zTrack_2d(image_folder, image_filenames, mask_folder, mask_filenames, 'NumCores', num_cores);
+cell_track  = zTrack_3d(image_folder, image_filenames, mask_folder, mask_filenames, 'NumCores', num_cores);
+
+
+Usage: According to the submission note, zTrack assume that input images are
 located in "../Fluo-N2DL-HeLa/01" and tracking results will be saved 
 into "../Fluo-N2DL-HeLa/01_RES".  
 
